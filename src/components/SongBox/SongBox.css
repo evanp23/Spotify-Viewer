@@ -1,0 +1,36 @@
+#songBoxDiv{
+    display: inline-flex;
+    flex-direction: row;
+    height: 64px;
+    padding: 20px;
+    gap: 25px;
+}
+
+#nameAndArtistBox{
+    /* display: flex;
+    flex-direction: column;
+    flex-basis: auto;
+    background-color: red;
+    
+    width: fit-content; */
+
+
+}
+
+#nameH3{
+    margin: 0px;
+}
+
+#artistP{
+    margin: 0px;
+}
+
+#longBox{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#songImage:hover{
+    cursor: pointer;
+}
