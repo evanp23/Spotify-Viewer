@@ -2,9 +2,24 @@
     display: inline-flex;
     flex-direction: row;
     height: 64px;
-    padding: 20px;
+    padding: 10px;
+    margin: 5px;
     gap: 25px;
+    border: 1px solid;
+    border-radius: 10px;
 }
+
+#currentSongBoxDiv{
+    display: inline-flex;
+    flex-direction: row;
+    height: 64px;
+    padding: 10px;
+    margin: 5px;
+    gap: 25px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
 
 #nameAndArtistBox{
     /* display: flex;
@@ -31,6 +46,13 @@
     gap: 20px;
 }
 
+#songImage{
+    border-radius: 100px;
+}
+
 #songImage:hover{
     cursor: pointer;
+    box-shadow: -5px 5px 10px black;
+    transform: translateY(-3px);
+    transform: translateX(3px);
 }

@@ -15,8 +15,6 @@ const refresh_token = process.env.REACT_APP_REFRESH_TOKEN!;
 
 
 class App extends Component{
-  //TODO: GET RID OF TRACK IN PROPS AND JUST HAVE IT IN STATE
-  
   spotifyApi = new SpotifyWebApi();
   spotify_me!: any;
   songs: any;
@@ -61,9 +59,8 @@ class App extends Component{
               ) : (
                   this.songs.items.map((val: any, key: any) => {
                     return(
-                      <div id="songContainer" key={key}>
-                        <SongBox track={(val.track)} current={false} token={this.state.spotifyToken}/>
-                      </div>
+                      <SongBox track={(val.track)} current={false} token={this.state.spotifyToken} key={key}/>
+                      
                     );
                   }
               ))}

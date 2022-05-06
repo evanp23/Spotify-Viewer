@@ -1,28 +1,13 @@
 #songsDiv{
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  justify-content: space-between;
 }
 
 #pageBox{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* background: rgb(63,94,251);
-  background: radial-gradient(circle, rgba(63,94,251,1) 41%, rgba(252,70,107,1) 100%); */
-
-  /* background: rgb(34,193,195);
-background: linear-gradient(145deg, rgba(34,193,195,1) 0%, rgba(253,45,234,1) 100%); */
-
-/* background: rgb(34,193,195);
-background: linear-gradient(145deg, rgba(34,193,195,0.7819502801120448) 0%, rgba(253,45,234,0.7707457983193278) 100%); */
-
-/* background: rgb(34,193,195);
-background: linear-gradient(145deg, rgba(34,193,195,0.47102591036414565) 0%, rgba(253,45,234,0.4374124649859944) 100%); */
-
-/* background: rgb(34,51,195);
-background: linear-gradient(145deg, rgba(34,51,195,0.47102591036414565) 0%, rgba(149,45,253,0.4374124649859944) 100%); */
-
-background: rgb(0,255,226);
-background: linear-gradient(145deg, rgba(0,255,226,0.3253676470588235) 0%, rgba(255,0,245,0.24693627450980393) 100%);
+  background: rgb(0,255,226);
+  background: linear-gradient(145deg, rgba(0,255,226,0.3253676470588235) 0%, rgba(255,0,245,0.24693627450980393) 100%);
 }

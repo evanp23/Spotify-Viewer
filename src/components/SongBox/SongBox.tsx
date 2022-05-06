@@ -45,11 +45,12 @@ export default class SongBox extends Component{
 
   render(){
     this.current && this.state.currentSong ? this.finalTrack = this.state.currentSong.item : this.finalTrack = this.track;
+    var finalDivName;
+    this.current ? finalDivName = "currentSongBoxDiv" : finalDivName = "songBoxDiv";
     return(
-      <div id="songBoxDiv">
-        
+      <div id={finalDivName}>
           <div>
-            <img id="songImage" src={this.finalTrack.album.images[2].url} onClick={() => this.onImageClicked(this.finalTrack.preview_url, this.track.name)}/>
+            <img id="songImage" src={this.finalTrack.album.images[2].url} onClick={() => this.onImageClicked(this.finalTrack.preview_url)}/>
           </div>
           <div id="longBox">
             <div id="nameAndArtistBox">
@@ -66,8 +67,12 @@ export default class SongBox extends Component{
     );
   }
 
-  onImageClicked(songUrl: string, songName: string){
-    if(this.audioStopped){
+  onImageClicked(songUrl: string){
+    console.log(this.finalTrack);
+    if(this.audioStopped || !(this.previewAudio.src == songUrl)){
+      if(this.playingSongPreview){
+        this.previewAudio.pause();
+      }  
       this.previewAudio = new Audio(songUrl);
       this.previewAudio.volume = 0.1;
       this.previewAudio.play();
@@ -117,6 +122,3 @@ export default class SongBox extends Component{
   }
 
 }
-
-
-
