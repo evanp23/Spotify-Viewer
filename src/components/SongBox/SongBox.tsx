@@ -39,7 +39,7 @@ export default class SongBox extends Component{
   componentDidMount(){
     if(this.current){
       this.getCurrentPlaybackState();
-      setInterval(()=> this.getCurrentPlaybackState(), 250);
+      setInterval(()=> this.getCurrentPlaybackState(), 500);
     }
   }
 
@@ -49,20 +49,25 @@ export default class SongBox extends Component{
     this.current ? finalDivName = "currentSongBoxDiv" : finalDivName = "songBoxDiv";
     return(
       <div id={finalDivName}>
-          <div>
-            <img id="songImage" src={this.finalTrack.album.images[2].url} onClick={() => this.onImageClicked(this.finalTrack.preview_url)}/>
-          </div>
-          <div id="longBox">
-            <div id="nameAndArtistBox">
-              <h3 id="nameH3">{this.finalTrack.name}</h3>
-              <p id="artistP">{this.finalTrack.artists[0].name}</p>
-            </div>
-              {!this.state.loading  ? <p>{
-                  this.msToTime(this.state.currentSong.progress_ms)
-                  + "/" + 
-                  this.msToTime(this.state.currentSong.item.duration_ms)
-                }</p>  : <></>}
-          </div>
+        
+        {!this.state.currentSong && this.current ? (<h3>Sorry, I'm not currently listening to anything.</h3>) : (
+          <>
+              <div>
+                <img id="songImage" src={this.finalTrack.album.images[2].url} onClick={() => this.onImageClicked(this.finalTrack.preview_url)}/>
+              </div>
+              <div id="longBox">
+                <div id="nameAndArtistBox">
+                  <h3 id="nameH3">{this.finalTrack.name}</h3>
+                  <p id="artistP">{this.finalTrack.artists[0].name}</p>
+                </div>
+                  {this.current && !this.state.loading  ? <p>{
+                      this.msToTime(this.state.currentSong.progress_ms)
+                      + "/" + 
+                      this.msToTime(this.state.currentSong.item.duration_ms)
+                    }</p>  : (<></>)}
+              </div>
+          </>
+        )}
       </div>
     );
   }
@@ -98,6 +103,20 @@ export default class SongBox extends Component{
     .then(
       (data) => {
         this.setState({currentSong: data, loading: false});
+        console.log("CURRENT", data);
+      },
+      function(err){
+        console.log(err);
+      }
+    )
+  }
+
+
+  async search(query: string){
+    this.spotifyApi.search(query, ["track"])
+    .then(
+      (data)=>{
+        console.log(data);
       },
       function(err){
         console.log(err);

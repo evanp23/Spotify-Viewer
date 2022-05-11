@@ -16,6 +16,7 @@
     "dotenv": "^16.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-dropdown-input": "^0.1.11",
     "react-scripts": "^5.0.1",
     "request": "^2.88.2",
     "spotify-web-api-js": "^1.5.2",
@@ -36,16 +37,9 @@
       "react-app/jest"
     ]
   },
-  "browserslist": {
-    "production": [
+  "browserslist": [
       ">0.2%",
       "not dead",
       "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  ]
 }

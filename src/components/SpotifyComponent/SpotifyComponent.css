@@ -1,0 +1,64 @@
+#songsDiv {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#pageBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: rgb(0, 255, 226);
+    background: linear-gradient(145deg, rgba(0, 255, 226, 0.3253676470588235) 0%, rgba(255, 0, 245, 0.24693627450980393) 100%);
+}
+
+#songSearch {
+    min-width: 400px;
+    min-height: 40px;
+    font-size: 18px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    position: absolute-center;
+}
+
+#searchBox {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#searchList {
+    max-width: 400px;
+    min-width: 400px;
+    max-height: 400px;
+    background-color: white;
+    position: absolute;
+    overflow: scroll;
+    overflow-x: hidden;
+    top: 66px;
+}
+
+#searchItemBox:hover {
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+#searchItemImage {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+#searchItemBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#clickForQueue:hover {
+    cursor: pointer;
+}

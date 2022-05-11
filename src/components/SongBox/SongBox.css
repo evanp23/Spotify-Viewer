@@ -52,7 +52,7 @@
 
 #songImage:hover{
     cursor: pointer;
-    box-shadow: -5px 5px 10px black;
+    box-shadow: -5px 5px 13px black;
     transform: translateY(-3px);
     transform: translateX(3px);
 }

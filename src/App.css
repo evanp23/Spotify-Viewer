@@ -1,9 +1,3 @@
-#songsDiv{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 #pageBox{
   display: flex;
   flex-direction: row;
