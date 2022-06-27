@@ -102,10 +102,6 @@ export default class SpotifyComponent extends Component{
                   );
                 }
                 ))}
-              <h1 id="clickForQueue" onClick={this.showQueueSelector}>Wow! You're that curious? Click here to add a song to my queue!</h1>
-              {
-                !this.state.showingQueueSelector ? (<></>) : (<p>showing</p>)
-              }
             </>
           </div>
         ) : (<h1>Loading</h1>)}
