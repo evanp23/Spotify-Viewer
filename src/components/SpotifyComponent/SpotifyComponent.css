@@ -13,34 +13,35 @@
 }
 
 #songSearch {
-    min-width: 400px;
-    min-height: 40px;
-    font-size: 18px;
+    min-height: 30px;
+    width: 98%;
     border-radius: 10px;
     align-items: center;
     justify-content: center;
     align-content: center;
-    position: absolute-center;
+    justify-items: center;
+    /* position: absolute-center; */
 }
 
 #searchBox {
     display: flex;
     flex-direction: column;
-    align-content: center;
-    justify-items: center;
-    align-items: center;
-    padding: 20px;
+    /* align-content: center; */
+    /* justify-items: center; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 #searchList {
-    max-width: 400px;
-    min-width: 400px;
     max-height: 400px;
     background-color: white;
-    position: absolute;
+    /* position: absolute; */
     overflow: scroll;
     overflow-x: hidden;
-    top: 66px;
+    /* top: 45px; */
 }
 
 #searchItemBox:hover {

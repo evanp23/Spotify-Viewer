@@ -52,7 +52,7 @@ export default class SongBox extends Component{
         
         {!this.state.currentSong && this.current ? (<h3>Sorry, I'm not currently listening to anything.</h3>) : (
           <>
-              <div>
+              <div id="songImageBox">
                 <img id="songImage" src={this.finalTrack.album.images[2].url} onClick={() => this.onImageClicked(this.finalTrack.preview_url)}/>
               </div>
               <div id="longBox">
@@ -60,7 +60,7 @@ export default class SongBox extends Component{
                   <h3 id="nameH3">{this.finalTrack.name}</h3>
                   <p id="artistP">{this.finalTrack.artists[0].name}</p>
                 </div>
-                  {this.current && !this.state.loading  ? <p>{
+                  {this.current && !this.state.loading  ? <p id="currSongTime">{
                       this.msToTime(this.state.currentSong.progress_ms)
                       + "/" + 
                       this.msToTime(this.state.currentSong.item.duration_ms)

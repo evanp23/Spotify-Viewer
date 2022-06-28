@@ -18,11 +18,11 @@ class App extends Component {
     return (
       <>
         <div id="pageBox">
-          <div id="leftBox">
-          </div>
+          {/* <div id="leftBox">
+          </div> */}
             <SpotifyComponent></SpotifyComponent>
-          <div id="rightBox">
-          </div>
+          {/* <div id="rightBox">
+          </div> */}
         </div>
       </>
     );

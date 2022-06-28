@@ -49,9 +49,9 @@ export default class SpotifyComponent extends Component{
               <div id="searchBox">
 
                 <form id="searchForm">
-                  <input autoComplete='off' id="songSearch" placeholder="Search for a song to add to my queue!" type="text" value={this.state.query} onChange={event => this.search(event)} />
+                  <input autoComplete='off' id="songSearch" placeholder="Add a song to my queue!" type="text" value={this.state.query} onChange={event => this.search(event)} />
                 </form>
-                <br></br>
+                {/* <br></br> */}
                 <>
                   {
                     !this.state.query ? (<></>) : (
