@@ -73,7 +73,6 @@ export default class SongBox extends Component{
   }
 
   onImageClicked(songUrl: string){
-    console.log(this.finalTrack);
     if(this.audioStopped || !(this.previewAudio.src == songUrl)){
       if(this.playingSongPreview){
         this.previewAudio.pause();
@@ -103,23 +102,8 @@ export default class SongBox extends Component{
     .then(
       (data) => {
         this.setState({currentSong: data, loading: false});
-        console.log("CURRENT", data);
       },
       function(err){
-        console.log(err);
-      }
-    )
-  }
-
-
-  async search(query: string){
-    this.spotifyApi.search(query, ["track"])
-    .then(
-      (data)=>{
-        console.log(data);
-      },
-      function(err){
-        console.log(err);
       }
     )
   }

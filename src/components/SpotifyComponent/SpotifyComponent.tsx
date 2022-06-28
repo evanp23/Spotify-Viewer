@@ -120,15 +120,12 @@ export default class SpotifyComponent extends Component{
 
   async search(event: any) {
     this.setState({ query: event.target.value, showSearchList: true });
-    console.log(this.state.query)
     this.spotifyApi.search(event.target.value, ["track"])
       .then(
         (data) => {
           this.state.searchResults = data;
-          console.log("search: ", this.state.query, this.state.searchResults);
         },
         function (err) {
-          console.log(err);
         }
       )
   }
@@ -137,7 +134,6 @@ export default class SpotifyComponent extends Component{
     if(this.state.showSearchList){
       this.setState({showSearchList: false});
     }
-    console.log(this.state.showSearchList);
   }
 
   showQueueSelector(event: any) {
@@ -148,7 +144,7 @@ export default class SpotifyComponent extends Component{
     this.spotifyApi.queue(uri)
       .then(
         function (data) {
-          console.log('success: ', data);
+          console.log('queue success: ', data);
         },
         function (err) {
           console.log(err);
@@ -196,8 +192,6 @@ export default class SpotifyComponent extends Component{
       (data) => {
         this.songs = data;
         this.setState({ songs: data, loadingSongs: false });
-
-        console.log("recent ", data);
       },
       function (err) {
         console.log(err);
